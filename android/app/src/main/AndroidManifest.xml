@@ -1,8 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="english_quiz_4_all"
-        android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+            android:requestLegacyExternalStorage="true"
+            android:label="english_quiz_4_all"
+            android:name="${applicationName}"
+            android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -23,7 +24,39 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with package="com.nuridal.supabase"-->
+                <data android:scheme="kakao45ee042daea7e2e86e8c24789c49fe13" android:host="oauth"/>
+
+            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+<!--                <data android:scheme="com.example.english_quiz_4_all" android:host="oauth"/>-->
+<!--&lt;!&ndash;                <data android:scheme="kakao45ee042daea7e2e86e8c24789c49fe13" android:host="oauth"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <data android:scheme="kakao8f7f6ea86bdff05c484c4fa26254d896" android:host="oauth"/>&ndash;&gt;-->
+
+<!--            </intent-filter>-->
         </activity>
+<!--        <activity android:name="com.kakao.sdk.flutter.AuthCodeCustomTabsActivity">-->
+<!--            <intent-filter android:label="flutter_web_auth">-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+<!--                &lt;!&ndash; Redirect URI, "kakao${YOUR_NATIVE_APP_KEY}://oauth" 형식 &ndash;&gt;-->
+<!--&lt;!&ndash;                <data android:scheme="com.example.english_quiz_4_all" android:host="oauth"/>&ndash;&gt;-->
+<!--                <data android:scheme="kakao45ee042daea7e2e86e8c24789c49fe13" android:host="oauth"/>-->
+<!--&lt;!&ndash;                <data android:scheme="kakao8f7f6ea86bdff05c484c4fa26254d896" android:host="oauth"/>&ndash;&gt;-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

@@ -7,13 +7,13 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(const Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacementNamed('/home');
+      Navigator.pushReplacementNamed(context, '/login');
     });
 
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          color: const Color(0xffdddd55),
+          color: const Color(0xffeeee44),
           child: const Center(
             child: Text(
               'Quiz',
